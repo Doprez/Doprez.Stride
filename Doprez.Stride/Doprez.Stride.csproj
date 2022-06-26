@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stride.Core" Version="4.0.1.1428" />
+    <PackageReference Include="Stride.Engine" Version="4.0.1.1428" />
+  </ItemGroup>
+
+</Project>

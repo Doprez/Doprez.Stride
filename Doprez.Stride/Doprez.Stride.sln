@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doprez.Stride", "Doprez.Stride.csproj", "{ECC2E9E5-B6D3-4AD3-99E3-C1E0831E3051}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECC2E9E5-B6D3-4AD3-99E3-C1E0831E3051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC2E9E5-B6D3-4AD3-99E3-C1E0831E3051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC2E9E5-B6D3-4AD3-99E3-C1E0831E3051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC2E9E5-B6D3-4AD3-99E3-C1E0831E3051}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7975E1F0-2745-4A3A-BD05-641EF086CBCC}
+	EndGlobalSection
+EndGlobal
