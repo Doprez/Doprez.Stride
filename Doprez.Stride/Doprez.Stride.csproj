@@ -5,8 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="jenkinsfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stride" Version="4.0.1.1428" />
     <PackageReference Include="Stride.Core" Version="4.0.1.1428" />
     <PackageReference Include="Stride.Engine" Version="4.0.1.1428" />
+    <PackageReference Include="Stride.Physics" Version="4.0.1.1428" />
   </ItemGroup>
 
 </Project>
