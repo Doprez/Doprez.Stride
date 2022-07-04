@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Boredom.Extensions
+namespace Doprez.Stride.Extensions
 {
 	public static class CustomScriptComponentExtensions
 	{

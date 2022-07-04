@@ -1,4 +1,5 @@
 ﻿using Doprez.Stride.Extensions;
+using Doprez.Stride.Interfaces;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Doprez.Stride.Physics
 {
+    [ComponentCategory("Physics")]
     public class Raycast : StartupScript
     {
         public CollisionFilterGroupFlags CollideWith;
@@ -42,6 +44,30 @@ namespace Doprez.Stride.Physics
             }
             hitResult = new HitResult();
             return false;
+        }
+
+        /// <summary>
+        /// Retrieves an attached IInteractable if it exists on the Entity
+        /// </summary>
+        /// <param name="entityPosition"></param>
+        /// <returns>IInteractable if found or null if not found</returns>
+        public IInteractable GetInteractableWithRayCast(Entity entityPosition)
+        {
+            Vector3 startPosition = new Vector3();
+            Quaternion rotation = new Quaternion();
+            Vector3 scale = new Vector3();
+            entityPosition.Transform.GetWorldTransformation(out startPosition, out rotation, out scale);
+
+            var targetPosition = Vector3.Transform(startPosition + new Vector3(0, 0, -3f), rotation);
+
+            IInteractable result = null;
+
+            if (_simulation.Raycast(startPosition, targetPosition, out HitResult _hitresult, CollisionFilterGroups.DefaultFilter, CollideWith))
+            {
+                result = _hitresult.Collider.Entity.GetComponent<IInteractable>();
+            }
+
+            return result;
         }
     }
 }
