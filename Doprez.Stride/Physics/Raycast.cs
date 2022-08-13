@@ -15,6 +15,7 @@ namespace Doprez.Stride.Physics
     public class Raycast : StartupScript
     {
         public CollisionFilterGroupFlags CollideWith;
+        public float RaycastRange { get; set; } = 1;
 
         private Simulation _simulation;
 
@@ -58,7 +59,7 @@ namespace Doprez.Stride.Physics
             Vector3 scale = new Vector3();
             entityPosition.Transform.GetWorldTransformation(out startPosition, out rotation, out scale);
 
-            var targetPosition = Vector3.Transform(startPosition + new Vector3(0, 0, -3f), rotation);
+            var targetPosition = entityPosition.Transform.Position;
 
             IInteractable result = null;
 
@@ -69,5 +70,21 @@ namespace Doprez.Stride.Physics
 
             return result;
         }
-    }
+
+		/// <summary>
+        /// A Raycast method based on the example in the fps demo
+		/// </summary>
+		///
+		public HitResult RayCast(Entity entityPosition)
+		{
+			var raycastStart = entityPosition.Transform.WorldMatrix.TranslationVector;
+			var forward = entityPosition.Transform.WorldMatrix.Forward;
+			var raycastEnd = raycastStart + forward * RaycastRange;
+
+			var result = this.GetSimulation().Raycast(raycastStart, raycastEnd);
+
+            return result;
+		}
+
+	}
 }

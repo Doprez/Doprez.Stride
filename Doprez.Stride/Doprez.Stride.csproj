@@ -1,14 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <Title>Doprez.Stride</Title>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <NeutralLanguage>en-CA</NeutralLanguage>
+    <RepositoryUrl>https://github.com/Doprez/Doprez.Stride</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Doprez/Doprez.Stride</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="jenkinsfile" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Stride" Version="4.1.0.1459-beta" />
-    <PackageReference Include="Stride.Core" Version="4.1.0.1459-beta" />
-    <PackageReference Include="Stride.Engine" Version="4.1.0.1459-beta" />
-    <PackageReference Include="Stride.Physics" Version="4.1.0.1459-beta" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Stride" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Core" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Engine" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Graphics" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Physics" Version="4.1.0.1734" />
   </ItemGroup>
 </Project>
