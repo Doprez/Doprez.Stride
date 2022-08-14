@@ -41,6 +41,10 @@ namespace Doprez.Stride.Physics
             _cameraRotation = CameraPivot.Transform.RotationEulerXYZ;
         }
 
+        /// <summary>
+        /// makes the player jump.
+        /// power is determined by the JumpPower variable
+        /// </summary>
         public void Jump()
         {
             float jump = 0;
@@ -49,7 +53,12 @@ namespace Doprez.Stride.Physics
             _character.Jump();
         }
 
-        public void MovePlayer(Vector2 moveDirection)
+		/// <summary>
+		/// Moves the player based on local rotation
+		/// speed is determined by the MovementSpeed variable
+		/// </summary>
+		/// <param name="moveDirection"></param>
+		public void MovePlayer(Vector2 moveDirection)
         {
             var velocity = new Vector3(moveDirection.X, 0, moveDirection.Y);
             velocity.Normalize();
@@ -58,7 +67,12 @@ namespace Doprez.Stride.Physics
             _character.SetVelocity(velocity);
         }
 
-        public void UpdateCameraRotation(Vector2 mouseMovement)
+		/// <summary>
+		/// Rotates the camera transform
+		/// rotation speed is determined by MouseSpeed and clamps are determined by MinCameraAngle and MaxCameraAngle
+		/// </summary>
+		/// <param name="mouseMovement"></param>
+		public void UpdateCameraRotation(Vector2 mouseMovement)
         {
             mouseMovement = mouseMovement * MouseSpeed * this.DeltaTime();
 

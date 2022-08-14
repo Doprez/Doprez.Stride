@@ -10,7 +10,6 @@ namespace Doprez.Stride.Extensions
 {
 	public static class CustomScriptComponentExtensions
 	{
-
 		public static float DeltaTime(this ScriptComponent scriptComponent)
 		{
 			return (float)scriptComponent.Game.UpdateTime.Elapsed.TotalSeconds;

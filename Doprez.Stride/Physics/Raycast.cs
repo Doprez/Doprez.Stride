@@ -24,12 +24,13 @@ namespace Doprez.Stride.Physics
             _simulation = this.GetSimulation();
         }
 
-        /// <summary>
-        /// return true if Raycast hit and outputs a HitResult
-        /// </summary>
-        /// <param name="entityPosition"></param>
-        /// <returns>IInteractable if found or null if not found</returns>
-        public bool FireRayCast(Entity entityPosition, out HitResult hitResult, float rayDistance)
+		/// <summary>
+		/// return true if Raycast hit and outputs a HitResult
+		/// </summary>
+		/// <param name="entityPosition"></param>
+		/// <returns>IInteractable if found or null if not found</returns>
+		[Obsolete("Please use the Raycast method instead. This method fails in negative quadrants of a scene")]
+		public bool FireRayCast(Entity entityPosition, out HitResult hitResult, float rayDistance)
         {
             Vector3 startPosition = new Vector3();
             Quaternion rotation = new Quaternion();
@@ -52,6 +53,7 @@ namespace Doprez.Stride.Physics
         /// </summary>
         /// <param name="entityPosition"></param>
         /// <returns>IInteractable if found or null if not found</returns>
+        [Obsolete("Please use the Raycast method instead. This method fails in negative quadrants of a scene")]
         public IInteractable GetInteractableWithRayCast(Entity entityPosition)
         {
             Vector3 startPosition = new Vector3();
@@ -73,8 +75,8 @@ namespace Doprez.Stride.Physics
 
 		/// <summary>
         /// A Raycast method based on the example in the fps demo
+        /// Make sure you are using the actual rotating Entity otherwise you will waste hours like I did debuging a non issue
 		/// </summary>
-		///
 		public HitResult RayCast(Entity entityPosition)
 		{
 			var raycastStart = entityPosition.Transform.WorldMatrix.TranslationVector;
@@ -84,6 +86,20 @@ namespace Doprez.Stride.Physics
 			var result = this.GetSimulation().Raycast(raycastStart, raycastEnd);
 
             return result;
+		}
+
+		/// <summary>
+		/// An async Raycast method based on the example in the fps demo
+		/// </summary>
+		public async Task<HitResult> RayCastAsync(Entity entityPosition)
+		{
+			var raycastStart = entityPosition.Transform.WorldMatrix.TranslationVector;
+			var forward = entityPosition.Transform.WorldMatrix.Forward;
+			var raycastEnd = raycastStart + forward * RaycastRange;
+
+			var result = await Task.FromResult(this.GetSimulation().Raycast(raycastStart, raycastEnd));
+
+			return result;
 		}
 
 	}
