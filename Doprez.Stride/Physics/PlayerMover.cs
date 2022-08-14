@@ -41,16 +41,19 @@ namespace Doprez.Stride.Physics
             _cameraRotation = CameraPivot.Transform.RotationEulerXYZ;
         }
 
-        /// <summary>
-        /// makes the player jump.
-        /// power is determined by the JumpPower variable
-        /// </summary>
-        public void Jump()
+		/// <summary>
+		/// makes the player jump.
+		/// power is determined by the JumpPower variable and uses the CharacterComponent.IsGrounded variable to validate if player can jump
+		/// </summary>
+		public void Jump()
         {
-            float jump = 0;
-            jump += JumpPower;
-            _character.JumpSpeed = jump;
-            _character.Jump();
+            if (_character.IsGrounded)
+            {
+                float jump = 0;
+                jump += JumpPower;
+                _character.JumpSpeed = jump;
+                _character.Jump();
+            }
         }
 
 		/// <summary>
