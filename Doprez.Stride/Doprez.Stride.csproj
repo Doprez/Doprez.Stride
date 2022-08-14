@@ -7,6 +7,13 @@
     <NeutralLanguage>en-CA</NeutralLanguage>
     <RepositoryUrl>https://github.com/Doprez/Doprez.Stride</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Doprez/Doprez.Stride</PackageProjectUrl>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="jenkinsfile" />
