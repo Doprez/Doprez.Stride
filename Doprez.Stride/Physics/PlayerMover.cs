@@ -43,7 +43,7 @@ namespace Doprez.Stride.Physics
 
 		/// <summary>
 		/// makes the player jump.
-		/// power is determined by the JumpPower variable and uses the CharacterComponent.IsGrounded variable to validate if player can jump
+		/// <para>power is determined by the JumpPower variable and uses the CharacterComponent.IsGrounded variable to validate if player can jump.</para>
 		/// </summary>
 		public void Jump()
         {
@@ -57,8 +57,8 @@ namespace Doprez.Stride.Physics
         }
 
 		/// <summary>
-		/// Moves the player based on local rotation
-		/// speed is determined by the MovementSpeed variable
+		/// Moves the player based on local rotation.
+		/// <para>speed is determined by the MovementSpeed variable.</para>
 		/// </summary>
 		/// <param name="moveDirection"></param>
 		public void MovePlayer(Vector2 moveDirection)
@@ -72,7 +72,7 @@ namespace Doprez.Stride.Physics
 
 		/// <summary>
 		/// Rotates the camera transform
-		/// rotation speed is determined by MouseSpeed and clamps are determined by MinCameraAngle and MaxCameraAngle
+		/// <para>rotation speed is determined by MouseSpeed and clamps are determined by MinCameraAngle and MaxCameraAngle</para>
 		/// </summary>
 		/// <param name="mouseMovement"></param>
 		public void UpdateCameraRotation(Vector2 mouseMovement)

@@ -25,8 +25,8 @@ namespace Doprez.Stride.Physics
         }
 
 		/// <summary>
-        /// A Raycast method based on the example in the fps demo
-        /// Make sure you are using the actual rotating Entity otherwise you will waste hours like I did debuging a non issue
+		/// A Raycast method based on the example in the fps demo
+		/// <para>Make sure you are using the actual rotating Entity otherwise you will waste hours like I did debuging a non issue</para>
 		/// </summary>
 		public HitResult RayCast(Entity entityPosition)
 		{
@@ -41,6 +41,7 @@ namespace Doprez.Stride.Physics
 
 		/// <summary>
 		/// An async Raycast method based on the example in the fps demo
+		/// <para>Make sure you are using the actual rotating Entity otherwise you will waste hours like I did debuging a non issue</para>
 		/// </summary>
 		public async Task<HitResult> RayCastAsync(Entity entityPosition)
 		{
