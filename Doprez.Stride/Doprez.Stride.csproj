@@ -41,4 +41,7 @@
 	  <PackageReference Include="Stride.UI" Version="4.1.0.1734" />
 	  <PackageReference Include="Stride.Core" Version="4.1.0.1734" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DoprezMath\" />
+  </ItemGroup>
 </Project>

@@ -14,13 +14,14 @@ namespace Doprez.Stride.Physics
     public class PlayerMover : StartupScript
 	{
         //Camera stuff
-        public float MouseSpeed;
-        public float MaxCameraAngle;
-        public float MinCameraAngle;
+        public float MouseSpeed { get; set; } = 2;
+        public float MaxCameraAngle { get; set; } = 90;
+        public float MinCameraAngle { get; set; } = -90;
 
         //Player stuff
-        public float MovementSpeed;
-        public float JumpPower;
+        public float MovementSpeed { get; set; } = 10;
+        public float SprintMultiplier { get; set; } = 2;
+        public float JumpPower { get; set; } = 4;
         
         //References
         public Entity CameraPivot;
@@ -61,11 +62,12 @@ namespace Doprez.Stride.Physics
 		/// <para>speed is determined by the MovementSpeed variable.</para>
 		/// </summary>
 		/// <param name="moveDirection"></param>
-		public void MovePlayer(Vector2 moveDirection)
+		public void MovePlayer(Vector2 moveDirection, bool isSprinting = false)
         {
             var velocity = new Vector3(moveDirection.X, 0, moveDirection.Y);
             velocity.Normalize();
-            velocity = Vector3.Transform(velocity * MovementSpeed * this.DeltaTime(), Entity.Transform.Rotation);
+            velocity = isSprinting ? velocity * SprintMultiplier : velocity;
+            velocity = Vector3.Transform(velocity * MovementSpeed, Entity.Transform.Rotation);
 
             _character.SetVelocity(velocity);
         }

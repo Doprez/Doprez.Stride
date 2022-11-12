@@ -8,7 +8,9 @@ namespace Doprez.Stride.StateMachines
 {
 	public interface IState
 	{
+		public string Name { get; set; }
 		public FiniteStateMachine FiniteStateMachine { get; set; }
+		public bool IsDefaultState { get; set; }
 
 		public void EnterState();
 		public void ExitState();

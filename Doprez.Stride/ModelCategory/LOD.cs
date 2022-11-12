@@ -23,7 +23,6 @@ public class LOD : AsyncScript
     public override async Task Execute()
     {
         _modelComponent = Entity.Get<ModelComponent>();
-        //LODs.Sort();
         _player = Entity.GetComponentInScene<CameraComponent>().Entity;
 
 		while (Game.IsRunning)
