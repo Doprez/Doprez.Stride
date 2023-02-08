@@ -1,12 +1,13 @@
-﻿using Doprez.Stride.Extensions;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Stride.Engine.PhysicsComponent;
 
 namespace Doprez.Stride.Physics
 {
@@ -29,15 +30,17 @@ namespace Doprez.Stride.Physics
         private Vector3 _cameraRotation;
         private CharacterComponent _character;
 
-        public override void Start()
+		public override void Start()
         {
             _character = Entity.Get<CharacterComponent>();
-            if( _character == null )
+
+			if (_character == null)
 			{
-                _character = new CharacterComponent();
+				//this doesnt work colliders must be added in stride for now
+				InitializeCharacterComponent();
 			}
 
-            MinCameraAngle = MathUtil.DegreesToRadians(MinCameraAngle);
+			MinCameraAngle = MathUtil.DegreesToRadians(MinCameraAngle);
             MaxCameraAngle = MathUtil.DegreesToRadians(MaxCameraAngle);
             _cameraRotation = CameraPivot.Transform.RotationEulerXYZ;
         }
@@ -90,6 +93,17 @@ namespace Doprez.Stride.Physics
 
             //for vertical rotation we only update the camera pivot
             CameraPivot.Transform.Rotation = Quaternion.RotationX(_cameraRotation.X);
+        }
+
+        private void InitializeCharacterComponent()
+        {
+            _character = new();
+            _character.ColliderShapes.Add(new CapsuleColliderShapeDesc()
+            {
+                LocalOffset = new Vector3(0,.5f,0),
+            });
+
+            Entity.Add(_character);
         }
     }
 }
