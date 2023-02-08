@@ -1,5 +1,4 @@
-﻿using Doprez.Stride.Extensions;
-using Doprez.Stride.Interfaces;
+﻿using Doprez.Stride.Interfaces;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
