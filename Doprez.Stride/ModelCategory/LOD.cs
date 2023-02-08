@@ -1,5 +1,4 @@
-﻿using Doprez.Stride.Extensions;
-using Stride.Core;
+﻿using Stride.Core;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Rendering.Compositing;
@@ -14,7 +13,7 @@ namespace Doprez.Stride.ModelCategory;
 [ComponentCategory("Model")]
 public class LOD : AsyncScript
 {
-	[DataMember(0, "LOD's")]
+	[DataMember(0, "LODs")]
 	public List<LODData> LODs = new List<LODData>();
 
     private Entity _player;
