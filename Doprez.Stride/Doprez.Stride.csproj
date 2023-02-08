@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Title>Doprez.Stride</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <NeutralLanguage>en-CA</NeutralLanguage>
     <RepositoryUrl>https://github.com/Doprez/Doprez.Stride</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Doprez/Doprez.Stride</PackageProjectUrl>
-    <Version>1.0.8</Version>
+    <Version>1.1.0</Version>
     <Description>A package of helper classes for use in the Stride Game Engine</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Stride3d;Game Engine;Stride;</PackageTags>
@@ -32,14 +32,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-	  <PackageReference Include="Stride.Engine" Version="4.1.0.1734" />
-
-	  <PackageReference Include="Stride.Video" Version="4.1.0.1734" />
-	  <PackageReference Include="Stride.Physics" Version="4.1.0.1734" />
-	  <PackageReference Include="Stride.Navigation" Version="4.1.0.1734" />
-	  <PackageReference Include="Stride.Particles" Version="4.1.0.1734" />
-	  <PackageReference Include="Stride.UI" Version="4.1.0.1734" />
-	  <PackageReference Include="Stride.Core" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Engine" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Video" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Physics" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Navigation" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Particles" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.UI" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Core" Version="4.1.0.1734" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DoprezMath\" />
