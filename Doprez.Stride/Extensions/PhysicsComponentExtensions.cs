@@ -47,7 +47,7 @@ public static class PhysicsComponentExtensions
 	}
 
 	/// <summary>
-	/// Doesnt work as expected right now but its supposed to return true when it collide with a specified type
+	/// Doesnt work as expected right now but its supposed to return true when it collides with a specified type
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="physicsComponent"></param>
