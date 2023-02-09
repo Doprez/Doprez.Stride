@@ -30,4 +30,8 @@ jobs:
 workflows:
   run-jobs-workflow:
     jobs:
-      - dotnet-commands
+      - dotnet-commands:
+          filters:
+            branches:
+              only:
+                - master
