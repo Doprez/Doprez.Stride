@@ -36,6 +36,15 @@ public static class EntityComponentExtensions
             return false;
         }
     }
+	/// <summary>
+	/// an easier way to get world position rather than Transform.WorldMatrix.TranslationVector
+	/// </summary>
+	/// <param name="entity"></param>
+	/// <returns></returns>
+	public static Vector3 WorldPosition(this Entity entity)
+	{
+		return entity.Transform.WorldMatrix.TranslationVector;
+	}
 
 	/// <summary>
 	/// This is very inefficient but useful for quick testing to find a component in a scene
