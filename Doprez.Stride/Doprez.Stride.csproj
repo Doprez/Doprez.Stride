@@ -32,13 +32,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Stride.Engine" Version="4.1.0.1734" />
-    <PackageReference Include="Stride.Video" Version="4.1.0.1734" />
-    <PackageReference Include="Stride.Physics" Version="4.1.0.1734" />
-    <PackageReference Include="Stride.Navigation" Version="4.1.0.1734" />
-    <PackageReference Include="Stride.Particles" Version="4.1.0.1734" />
-    <PackageReference Include="Stride.UI" Version="4.1.0.1734" />
-    <PackageReference Include="Stride.Core" Version="4.1.0.1734" />
+    <PackageReference Include="Stride.Engine" Version="4.1.0.1805" />
+    <PackageReference Include="Stride.Video" Version="4.1.0.1805" />
+    <PackageReference Include="Stride.Physics" Version="4.1.0.1805" />
+    <PackageReference Include="Stride.Navigation" Version="4.1.0.1805" />
+    <PackageReference Include="Stride.Particles" Version="4.1.0.1805" />
+    <PackageReference Include="Stride.UI" Version="4.1.0.1805" />
+    <PackageReference Include="Stride.Core" Version="4.1.0.1805" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DoprezMath\" />
