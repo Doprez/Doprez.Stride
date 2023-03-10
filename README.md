@@ -95,7 +95,8 @@ public class PlayerController : SyncScript
 
 DestroyEntity() provides a quick way to remove an entity from the scene.
 GetYAngleToTarget(OtherEntity) get the angle to the target entity.
-GetComponent() similar to Unity. Unlike Stride default Get() this one will also be able to grab non EntityComponent classes like Interfaces.
+GetComponent() similar to Unity. Unlike Strides default Get() this one will also be able to grab non EntityComponent classes like Interfaces.
+GetComponents() similar to Unity. Unlike Strides default Get() this one will also be able to grab non EntityComponent classes like Interfaces as an IEnumerable.
 WorldPosition() a faster way to get the world position
 
 ## ModelComponent
