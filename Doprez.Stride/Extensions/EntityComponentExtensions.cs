@@ -1,5 +1,6 @@
 ﻿using Stride.Core.Mathematics;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Stride.Engine;
@@ -19,12 +20,24 @@ public static class EntityComponentExtensions
         return result;
     }
 
-    /// <summary>
-    /// Destroys the entity that calls this method.
-    /// </summary>
-    /// <param name="entity"></param>
-    /// <returns></returns>
-    public static bool DestroyEntity(this Entity entity)
+	/// <summary>
+	/// Gets all components of type T
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="entity"></param>
+	/// <returns></returns>
+	public static IEnumerable<T> GetComponents<T>(this Entity entity)
+	{
+		var result = entity.OfType<T>();
+		return result;
+	}
+
+	/// <summary>
+	/// Destroys the entity that calls this method.
+	/// </summary>
+	/// <param name="entity"></param>
+	/// <returns></returns>
+	public static bool DestroyEntity(this Entity entity)
     {
         try
         {
