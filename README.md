@@ -88,3 +88,26 @@ public class PlayerController : SyncScript
 	}
 }
 ```
+
+# Helpful Extensions
+
+## EntityComponent
+
+ - DestroyEntity() provides a quick way to remove an entity from the scene.
+ - GetYAngleToTarget(OtherEntity) get the angle to the target entity.
+ - GetComponent() similar to Unity. Unlike Strides default Get() this one will also be able to grab non EntityComponent classes like Interfaces.
+ - GetComponents() similar to Unity. Unlike Strides default Get() this one will also be able to grab non EntityComponent classes like Interfaces as an IEnumerable.
+ - WorldPosition() a faster way to get the world position
+
+## ModelComponent
+
+ - GetMeshHeight() will get the Y height of a model.
+
+## ScriptComponent
+
+ - DeltaTime() a faster way to get delta time.
+
+## PhysicsComponent
+
+ - All a WIP as they dont seem to consitantly work
+
