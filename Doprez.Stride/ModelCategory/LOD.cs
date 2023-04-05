@@ -10,19 +10,20 @@ using System.Threading.Tasks;
 
 namespace Doprez.Stride.ModelCategory;
 
+[DataContract("SimpleLODComponent", Inherited = true)]
 [ComponentCategory("Model")]
-public class LOD : AsyncScript
+public class SimpleLOD : AsyncScript
 {
-	[DataMember(0, "LODs")]
+	[DataMember(0, "LOD's")]
 	public List<LODData> LODs = new List<LODData>();
 
-    private Entity _player;
+    private Entity _camera;
     private ModelComponent _modelComponent;
 
     public override async Task Execute()
     {
         _modelComponent = Entity.Get<ModelComponent>();
-        _player = Entity.GetComponentInScene<CameraComponent>().Entity;
+        _camera = Entity.GetComponentInScene<CameraComponent>().Entity;
 
 		while (Game.IsRunning)
         {
@@ -34,7 +35,7 @@ public class LOD : AsyncScript
 
     private void UpdateCurrentLOD()
 	{
-		var distance = GetDistanceBetweenVectors(_player.Transform.WorldMatrix.TranslationVector, Entity.Transform.WorldMatrix.TranslationVector);
+		var distance = Vector3.Distance(_camera.WorldPosition(), Entity.WorldPosition());
 		for (int i = LODs.Count - 1; i >= 0; i--)
         {
             if (distance < LODs[i].DistanceToActivate && _modelComponent.Model != LODs[i].MeshLOD)
@@ -43,17 +44,4 @@ public class LOD : AsyncScript
             }
 		}
     }
-
-    private float GetDistanceBetweenVectors(Vector3 pointA, Vector3 pointB)
-    {
-        var result = MathF.Sqrt
-            (
-                (pointB.X - pointA.X) * (pointB.X - pointA.X)
-				+ (pointB.Y - pointA.Y) * (pointB.Y - pointA.Y)
-				+ (pointB.Z - pointA.Z) * (pointB.Z - pointA.Z)
-            );
-
-        return result;
-    }
-
 }
