@@ -1,5 +1,5 @@
 # Doprez.Stride
-A bundle of Stride related libraries
+A bundle of Stride related libraries.
 
 # Build Status
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Doprez/Doprez.Stride/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Doprez/Doprez.Stride/tree/master)
@@ -97,7 +97,7 @@ public class PlayerController : SyncScript
  - GetYAngleToTarget(OtherEntity) get the angle to the target entity.
  - GetComponent() similar to Unity. Unlike Strides default Get() this one will also be able to grab non EntityComponent classes like Interfaces.
  - GetComponents() similar to Unity. Unlike Strides default Get() this one will also be able to grab non EntityComponent classes like Interfaces as an IEnumerable.
- - WorldPosition() a faster way to get the world position
+ - WorldPosition() an easier way to get the world position.
 
 ## ModelComponent
 
@@ -109,5 +109,5 @@ public class PlayerController : SyncScript
 
 ## PhysicsComponent
 
- - All a WIP as they dont seem to consitantly work
+ - All a WIP as they dont seem to consitantly work.
 
