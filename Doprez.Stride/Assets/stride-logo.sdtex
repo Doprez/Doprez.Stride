@@ -1,0 +1,7 @@
+!Texture
+Id: 975b40ad-3cec-4072-a999-688e08e30599
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../Users/User/Pictures/stride-logo.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

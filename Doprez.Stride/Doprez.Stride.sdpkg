@@ -2,7 +2,7 @@
 SerializedVersion: {Assets: 3.1.0.0}
 Meta:
     Name: Doprez.Stride
-    Version: 1.2.0
+    Version: 1.2.5
     Authors: []
     Owners: []
     Dependencies: null
@@ -14,4 +14,6 @@ OutputGroupDirectories: {}
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets: []
+RootAssets:
+    - 975b40ad-3cec-4072-a999-688e08e30599:stride-logo
+    - a648d679-c82a-4193-a2db-59cb4c0e8c72:ExtendedButtons
