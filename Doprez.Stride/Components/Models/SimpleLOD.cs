@@ -1,16 +1,12 @@
 ﻿using Stride.Core;
 using Stride.Core.Mathematics;
 using Stride.Engine;
-using Stride.Rendering.Compositing;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Doprez.Stride.ModelCategory;
 
-[DataContract("SimpleLODComponent", Inherited = true)]
+[DataContract("DoprezSimpleLODComponent", Inherited = true)]
 [ComponentCategory("Model")]
 public class SimpleLOD : AsyncScript
 {

@@ -1,16 +1,12 @@
-﻿using Doprez.Stride.Interfaces;
-using Stride.Core.Mathematics;
+﻿using Stride.Core;
 using Stride.Engine;
 using Stride.Physics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Doprez.Stride.Physics
 {
     [ComponentCategory("Physics")]
+	[DataContract("DoprezRaycast")]
     public class Raycast : StartupScript
     {
         public CollisionFilterGroupFlags CollideWith;
@@ -31,7 +27,7 @@ namespace Doprez.Stride.Physics
 		{
 			var raycastStart = entityPosition.Transform.WorldMatrix.TranslationVector;
 			var forward = entityPosition.Transform.WorldMatrix.Forward;
-			var raycastEnd = raycastStart + forward * RaycastRange;
+			var raycastEnd = raycastStart + (forward * RaycastRange);
 
 			var result = _simulation.Raycast(raycastStart, raycastEnd);
 
@@ -46,12 +42,11 @@ namespace Doprez.Stride.Physics
 		{
 			var raycastStart = entityPosition.Transform.WorldMatrix.TranslationVector;
 			var forward = entityPosition.Transform.WorldMatrix.Forward;
-			var raycastEnd = raycastStart + forward * RaycastRange;
+			var raycastEnd = raycastStart + (forward * RaycastRange);
 
 			var result = await Task.FromResult(_simulation.Raycast(raycastStart, raycastEnd));
 
 			return result;
 		}
-
 	}
 }

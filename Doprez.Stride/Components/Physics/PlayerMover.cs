@@ -1,17 +1,12 @@
-﻿using Stride.Core.Mathematics;
+﻿using Stride.Core;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Stride.Engine.PhysicsComponent;
 
 namespace Doprez.Stride.Physics
 {
     [ComponentCategory("Physics")]
+    [DataContract("DoprezPlayerMover")]
     public class PlayerMover : StartupScript
 	{
         //Camera stuff
