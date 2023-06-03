@@ -32,6 +32,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.59.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Stride.Engine" Version="4.1.0.1822" />
     <PackageReference Include="Stride.Video" Version="4.1.0.1822" />
     <PackageReference Include="Stride.Physics" Version="4.1.0.1822" />
