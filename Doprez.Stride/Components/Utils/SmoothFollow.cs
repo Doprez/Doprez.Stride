@@ -8,7 +8,6 @@ namespace Doprez.Stride.Utils;
 [ComponentCategory("DoprezUtils")]
 public class SmoothFollow : SyncScript
 {
-
 	public Entity EntityToFollow { get; set; }
 	public Vector3 Speed { get; set; } = new Vector3(1, 1, 1);
 

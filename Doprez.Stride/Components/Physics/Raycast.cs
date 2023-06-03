@@ -27,7 +27,7 @@ namespace Doprez.Stride.Physics
 		{
 			var raycastStart = entityPosition.Transform.WorldMatrix.TranslationVector;
 			var forward = entityPosition.Transform.WorldMatrix.Forward;
-			var raycastEnd = raycastStart + forward * RaycastRange;
+			var raycastEnd = raycastStart + (forward * RaycastRange);
 
 			var result = _simulation.Raycast(raycastStart, raycastEnd);
 
@@ -42,12 +42,11 @@ namespace Doprez.Stride.Physics
 		{
 			var raycastStart = entityPosition.Transform.WorldMatrix.TranslationVector;
 			var forward = entityPosition.Transform.WorldMatrix.Forward;
-			var raycastEnd = raycastStart + forward * RaycastRange;
+			var raycastEnd = raycastStart + (forward * RaycastRange);
 
 			var result = await Task.FromResult(_simulation.Raycast(raycastStart, raycastEnd));
 
 			return result;
 		}
-
 	}
 }

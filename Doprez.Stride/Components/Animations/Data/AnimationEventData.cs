@@ -6,7 +6,6 @@ namespace Doprez.Stride.Animations.Data;
 [Display("EventData")]
 public struct AnimationEventData
 {
-
 	/// <summary>
 	/// Set the Name of the Animation in the AnimationComponent
 	/// </summary>

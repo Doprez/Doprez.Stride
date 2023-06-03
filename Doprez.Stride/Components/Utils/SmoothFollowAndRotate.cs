@@ -8,7 +8,6 @@ namespace Doprez.Stride.Utils;
 [DataContract("DoprezSmoothFollowAndRotate")]
 public class SmoothFollowAndRotate : SyncScript
 {
-
 	public Entity EntityToFollow { get; set; }
 	public float Speed { get; set; } = 1;
 

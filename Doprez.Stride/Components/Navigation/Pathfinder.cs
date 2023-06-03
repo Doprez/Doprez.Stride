@@ -14,7 +14,6 @@ namespace Doprez.Stride.Navigation;
 [ComponentCategory("Navigation")]
 public class Pathfinder : StartupScript
 {
-
 	public float MovementSpeed { get; set; } = 10;
 	public Vector3 TargetPosition;
 	public string NavGroupName { get; set; }
