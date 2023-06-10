@@ -3,16 +3,41 @@ using Stride.Core;
 using Stride.Engine;
 
 namespace Doprez.Stride.Animations;
+
+/// <summary>
+/// An event that can be triggered by an Animation time interval
+/// </summary>
+/// <userdoc>
+/// An event that can be triggered by an Animation time interval
+/// </userdoc>
 [DataContract("DoprezAnimationEvent")]
 [ComponentCategory("Animation")]
 [AllowMultipleComponents]
 public class AnimationEvent : SyncScript
 {
+	/// <summary>
+	/// Name of the event
+	/// </summary>
+	/// <userdoc>
+	/// Name of the event
+	/// </userdoc>
 	[DataMember(0)]
 	public string EventName { get; set; }
 
+	/// <summary>
+	/// Event data
+	/// </summary>
+	/// <userdoc>
+	/// Event data
+	/// </userdoc>
 	[DataMember(10)]
 	public AnimationEventData EventData { get; set; }
+	/// <summary>
+	/// Determines if the event is continuous or not
+	/// </summary>
+	/// <userdoc>
+	/// Determines if the event is continuous or not
+	/// </userdoc>
 	[DataMember(11)]
 	public AnimationTriggerAction TriggerAction { get; set; } = AnimationTriggerAction.Once;
 
