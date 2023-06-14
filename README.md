@@ -106,8 +106,14 @@ public class PlayerController : SyncScript
 ## ScriptComponent
 
  - DeltaTime() a faster way to get delta time.
+ - GetCamera() Gets the camera with the name main in the Scene
+ - GetCamera(name) Gets the camera with a custom name in the Scene
+ - GetFirstCamera() Gets the first camera available in the GraphicsCompositor
 
 ## PhysicsComponent
 
- - All a WIP as they dont seem to consitantly work.
+ - All WIP as they dont seem to consitantly work.
 
+## Game
+
+- FPS() a quick way to get FPS
