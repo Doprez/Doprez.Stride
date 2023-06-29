@@ -107,7 +107,7 @@ public class PlayerController : SyncScript
 
  - DeltaTime() a faster way to get delta time.
  - GetCamera() Gets the camera with the name main in the Scene
- - GetCamera(name) Gets the camera with a custom name in the Scene
+ - GetCamera(string name) Gets the camera with a custom name in the Scene
  - GetFirstCamera() Gets the first camera available in the GraphicsCompositor
 
 ## PhysicsComponent
