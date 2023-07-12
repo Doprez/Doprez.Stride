@@ -19,6 +19,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>portable</DebugType>
   </PropertyGroup>
+  <PropertyGroup>
+  	<StrideAssemblyProcessor>true</StrideAssemblyProcessor>
+  	<StrideBuildTags>*</StrideBuildTags>
+  	<StridePackAssets>true</StridePackAssets>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="jenkinsfile" />
   </ItemGroup>
@@ -46,6 +51,7 @@
     <PackageReference Include="Stride.Core" Version="4.1.0.1822" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\" />
     <Folder Include="DoprezMath\" />
   </ItemGroup>
 </Project>
