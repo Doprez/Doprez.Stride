@@ -5,7 +5,7 @@ using Stride.Engine;
 namespace Doprez.Stride.Utils;
 
 [DataContract("DoprezSmoothFollow")]
-[ComponentCategory("DoprezUtils")]
+[ComponentCategory("Utils")]
 public class SmoothFollow : SyncScript
 {
 	public Entity EntityToFollow { get; set; }

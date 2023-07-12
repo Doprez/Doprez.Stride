@@ -7,7 +7,6 @@ namespace Stride.Engine;
 
 public static class EntityComponentExtensions
 {
-
     /// <summary>
     /// Definitely not a rip off of Unity's GetComponent.
     /// </summary>
@@ -49,6 +48,7 @@ public static class EntityComponentExtensions
             return false;
         }
     }
+
 	/// <summary>
 	/// an easier way to get world position rather than Transform.WorldMatrix.TranslationVector
 	/// </summary>
@@ -203,5 +203,4 @@ public static class EntityComponentExtensions
 
 		return (float)angleInRadians;
 	}
-
 }

@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+	<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <Title>Doprez.Stride</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -18,6 +19,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>portable</DebugType>
   </PropertyGroup>
+  <PropertyGroup>
+  	<StrideAssemblyProcessor>true</StrideAssemblyProcessor>
+  	<StrideBuildTags>*</StrideBuildTags>
+  	<StridePackAssets>true</StridePackAssets>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="jenkinsfile" />
   </ItemGroup>
@@ -32,6 +38,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.59.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Stride.Engine" Version="4.1.0.1822" />
     <PackageReference Include="Stride.Video" Version="4.1.0.1822" />
     <PackageReference Include="Stride.Physics" Version="4.1.0.1822" />
@@ -41,6 +51,7 @@
     <PackageReference Include="Stride.Core" Version="4.1.0.1822" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\" />
     <Folder Include="DoprezMath\" />
   </ItemGroup>
 </Project>
