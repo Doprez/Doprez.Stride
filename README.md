@@ -4,6 +4,22 @@ A bundle of Stride related libraries.
 # Build Status
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Doprez/Doprez.Stride/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Doprez/Doprez.Stride/tree/master)
 
+# Installation
+
+## Nuget method
+ - Simple just ad the nuget package to your package!
+ - this is limited to only extensions since Stride does not know how to read the ScriptComponents
+
+## Download method 1
+ - Download the project
+ - add the csproj as a reference to your game solution
+ - done
+ - sometimes multiple project references can cause reload issues in Gamestudio, if so use [Download method 2](https://github.com/Doprez/Doprez.Stride/edit/master/README.md#download-method-2).
+
+## Download method 2
+ - Download the project
+ - copy the folders (Components, Extensions, DoprezMath, Utilities and Interfaces) into a folder in your project, I usually name it Core.
+
 # Examples
 
 ## Player Controller Example
