@@ -14,7 +14,7 @@ A bundle of Stride related libraries.
  - Download the project
  - add the csproj as a reference to your game solution
  - done
- - sometimes multiple project references can cause reload issues in Gamestudio, if so use [Download method 2](https://github.com/Doprez/Doprez.Stride/edit/master/README.md#download-method-2).
+ - sometimes multiple project references can cause reload issues in Gamestudio, if so use [Download method 2](https://github.com/Doprez/Doprez.Stride/tree/master#download-method-2).
 
 ## Download method 2
  - Download the project
