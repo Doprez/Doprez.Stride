@@ -1,4 +1,5 @@
-﻿using Stride.Rendering.Compositing;
+﻿using System;
+using Stride.Rendering.Compositing;
 
 namespace Stride.Engine;
 
@@ -19,7 +20,26 @@ public static class ScriptComponentExtensions
 	/// </summary>
 	/// <param name="scriptComponent"></param>
 	/// <returns></returns>
+	[Obsolete("Use GetMainCamera() instead of this.")]
 	public static CameraComponent GetCamera(this ScriptComponent scriptComponent)
+	{
+		SceneCameraSlotCollection cameraCollection = scriptComponent.SceneSystem.GraphicsCompositor.Cameras;
+		foreach (var sceneCamera in cameraCollection)
+		{
+			if (sceneCamera.Name == "Main")
+			{
+				return sceneCamera.Camera;
+			}
+		}
+		return null;
+	}
+	
+	/// <summary>
+	/// Gets the camera from the <see cref="GraphicsCompositor"/> with the name main
+	/// </summary>
+	/// <param name="scriptComponent"></param>
+	/// <returns></returns>
+	public static CameraComponent GetMainCamera(this ScriptComponent scriptComponent)
 	{
 		SceneCameraSlotCollection cameraCollection = scriptComponent.SceneSystem.GraphicsCompositor.Cameras;
 		foreach (var sceneCamera in cameraCollection)

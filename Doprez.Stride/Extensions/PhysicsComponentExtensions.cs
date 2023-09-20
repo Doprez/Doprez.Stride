@@ -52,7 +52,7 @@ public static class PhysicsComponentExtensions
 	/// <typeparam name="T"></typeparam>
 	/// <param name="physicsComponent"></param>
 	/// <returns></returns>
-	public static async Task<bool> IsCollidingWithType<T>(this PhysicsComponent physicsComponent)
+	public static async Task<bool> IsCollidingWithType<T>(this PhysicsComponent physicsComponent)where T: EntityComponent
 	{
 		var firstCollision = await physicsComponent.GetCollidedEntity();
 
