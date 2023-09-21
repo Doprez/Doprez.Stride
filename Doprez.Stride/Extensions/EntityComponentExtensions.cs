@@ -13,7 +13,7 @@ public static class EntityComponentExtensions
     /// <typeparam name="T"></typeparam>
     /// <param name="entity"></param>
     /// <returns></returns>
-    public static T GetComponent<T>(this Entity entity) where T : EntityComponent
+    public static T GetComponent<T>(this Entity entity)
     {
         foreach (var entityComponent in entity)
         {
@@ -30,7 +30,7 @@ public static class EntityComponentExtensions
     /// <typeparam name="T"></typeparam>
     /// <param name="entity"></param>
     /// <returns></returns>
-    public static IEnumerable<T> GetComponents<T>(this Entity entity) where T : EntityComponent
+    public static IEnumerable<T> GetComponents<T>(this Entity entity)
     {
         foreach (var entityComponent in entity)
         {
@@ -46,7 +46,7 @@ public static class EntityComponentExtensions
     /// <param name="entity"></param>
     /// <param name="results"></param>
     /// <returns></returns>
-    public static void GetComponents<T>(this Entity entity, IList<T> results) where T : EntityComponent
+    public static void GetComponents<T>(this Entity entity, IList<T> results)
     {
         if (results == null)
             throw new ArgumentNullException(nameof(results));
@@ -92,7 +92,7 @@ public static class EntityComponentExtensions
     /// <typeparam name="T"></typeparam>
     /// <param name="entity"></param>
     /// <returns></returns>
-    public static T GetComponentInScene<T>(this Entity entity) where T: EntityComponent
+    public static T GetComponentInScene<T>(this Entity entity)
     {
         foreach (var entitiesInScene in entity.Scene.Entities)
         {
@@ -115,7 +115,7 @@ public static class EntityComponentExtensions
     /// <typeparam name="T"></typeparam>
     /// <param name="entity"></param>
     /// <returns></returns>
-    public static T FindComponentInChildren<T>(this Entity entity) where T: EntityComponent
+    public static T FindComponentInChildren<T>(this Entity entity)
     {
         foreach (var currentEntity in entity.GetChildren())
         {
@@ -145,7 +145,7 @@ public static class EntityComponentExtensions
         return default;
     }
 
-    public static T FindComponentInScene<T>(this Entity entity) where T: EntityComponent
+    public static T FindComponentInScene<T>(this Entity entity)
     {
         foreach (var entitiesInScene in entity.Scene.Entities)
         {
