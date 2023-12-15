@@ -1,10 +1,5 @@
 ﻿using Stride.Core.Mathematics;
-using Stride.Engine;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Doprez.Stride.DoprezMath;
 public static class MathHelper
