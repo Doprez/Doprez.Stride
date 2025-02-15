@@ -1,3 +1,6 @@
+> [!WARNING]  
+> I am no longer maintaining this library. Please look into the [community toolkit](https://github.com/stride3d/stride-community-toolkit) as the new replacement.
+
 # Doprez.Stride
 A bundle of Stride related libraries.
 
